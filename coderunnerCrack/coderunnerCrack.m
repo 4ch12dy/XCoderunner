@@ -19,9 +19,6 @@ int replace_fun(const char* key){
     NSString* keyStr = [NSString stringWithUTF8String:key];
 
     NSLog(@"===xxx===:hook suc key:%@", keyStr);
-    if([keyStr isEqualToString:@"AAAAA-AAAAA-AAAAA-AAAAA"]){
-        return 0x1;
-    }
     return 0x1;
 }
 
