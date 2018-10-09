@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		0A1E6287216759440086A6D1 /* coderunnerCrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A1E6286216759440086A6D1 /* coderunnerCrack.h */; };
 		0A1E6289216759440086A6D1 /* coderunnerCrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1E6288216759440086A6D1 /* coderunnerCrack.m */; };
+		0A1E6292216759C60086A6D1 /* libsubstitute.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1E6291216759C60086A6D1 /* libsubstitute.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A1E6283216759440086A6D1 /* libcoderunnerCrack.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcoderunnerCrack.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A1E6286216759440086A6D1 /* coderunnerCrack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = coderunnerCrack.h; sourceTree = "<group>"; };
 		0A1E6288216759440086A6D1 /* coderunnerCrack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coderunnerCrack.m; sourceTree = "<group>"; };
+		0A1E628F2167596D0086A6D1 /* substitute */ = {isa = PBXFileReference; lastKnownFileType = folder; path = substitute; sourceTree = "<group>"; };
+		0A1E6291216759C60086A6D1 /* libsubstitute.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsubstitute.dylib; path = coderunnerCrack/substitute/libsubstitute.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -22,6 +25,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A1E6292216759C60086A6D1 /* libsubstitute.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +37,7 @@
 			children = (
 				0A1E6285216759440086A6D1 /* coderunnerCrack */,
 				0A1E6284216759440086A6D1 /* Products */,
+				0A1E6290216759C60086A6D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,10 +52,19 @@
 		0A1E6285216759440086A6D1 /* coderunnerCrack */ = {
 			isa = PBXGroup;
 			children = (
+				0A1E628F2167596D0086A6D1 /* substitute */,
 				0A1E6286216759440086A6D1 /* coderunnerCrack.h */,
 				0A1E6288216759440086A6D1 /* coderunnerCrack.m */,
 			);
 			path = coderunnerCrack;
+			sourceTree = "<group>";
+		};
+		0A1E6290216759C60086A6D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A1E6291216759C60086A6D1 /* libsubstitute.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +257,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/coderunnerCrack/substitute",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -255,6 +273,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/coderunnerCrack/substitute",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
